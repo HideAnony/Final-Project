@@ -243,7 +243,7 @@
   <div id="toastBox" class="hidden fixed bottom-4 right-4 z-50 bg-emerald-600 text-white px-4 py-3 rounded-xl shadow-2xl text-xs sm:text-sm font-medium flex items-center gap-2"></div>
 
   <script>
-    // Shared keys used by both main_report.html and technician.html
+    // Shared keys used by both main_report.html and technician_portal.html
     const STORAGE_KEY = 'netlogic_tech_eod_portal_v1';
     const SHARED_PROJECTS_KEY = 'infratrack_dispatch_projects_v2';
     const CLOUD_URL_KEY = 'netlogic_firebase_rtdb_url_v1';
@@ -987,7 +987,7 @@
                   </p>
                   ${team.length > 1 ? `<p class="text-[11px] text-slate-400"><i class="fa-solid fa-users mr-1 text-cyan-400"></i>Team: ${team.map(u => { const m = state.technicians.find(x => x.username === u); return esc(m ? m.name : u); }).join(', ')}</p>` : ''}
                 </div>
-                <a href="./technician.html?tech=${encodeURIComponent(tech.username)}" class="bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/40 px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition shrink-0">
+                <a href="./technician_portal.html?tech=${encodeURIComponent(tech.username)}" class="bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/40 px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition shrink-0">
                   Tech Page <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
                 </a>
               </div>
